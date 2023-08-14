@@ -6,5 +6,9 @@ export default function useForm(initialForm) {
     function handleForm(e) {
         setForm({ ...form, [e.target.name]: e.target.value})
     }
+    function resetForm() {
+        setForm(initialForm);
+    }
+    
     return { form, handleForm }
 }
