@@ -3,10 +3,13 @@ import { useLogout } from '../../services/auth';
 import { useProducts } from '../../services/products';
 import { Link } from 'react-router-dom';
 import { HomePageContainer } from './styled';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function HomePage() {
     const { products, loading } = useProducts();
     const logout = useLogout();
+    const navigate = useNavigate();
 
     return (
         <HomePageContainer>
